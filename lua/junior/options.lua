@@ -3,7 +3,7 @@ local opt = vim.opt -- (set vimscript)
 local options = {
   backup = false,                          -- não gera backup
   clipboard = "unnamedplus",               -- da acesso ao clipboard do sistema ao neovim
-  cmdheight = 2,                           -- espaço na linha de comando do neovim
+  cmdheight = 1,                           -- espaço na linha de comando do neovim
   completeopt = { "menuone", "noselect" }, -- lista de comandos separada por vírgula (insert mode)
   conceallevel = 2,                        -- torna `` visivel em arquivos markdown
   ignorecase = true,                       -- ignora case em buscas
@@ -30,7 +30,8 @@ local options = {
   wrap = true,                             -- quebra linha caso seja mais que a largura da tela
   scrolloff = 8,                           -- mínimo de linhas acima e abaixo da linha atual
   guifont = "monospace:h17",               -- fonte
-  eol = true                               -- adiciona uma linha em branco no final do arquivo
+  eol = true,                              -- adiciona uma linha em branco no final do arquivo
+  termguicolors = true                     -- habilita cores 24-bits
 }
 
 for k, v in pairs(options) do
