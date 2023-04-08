@@ -1,2 +1,2 @@
-require("junior.options")
+require "junior.options"
 
