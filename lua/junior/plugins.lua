@@ -44,7 +44,20 @@ packer.init {
 return packer.startup(function(use)
   use "wbthomason/packer.nvim"      -- gerencia plugins
   use "nvim-lua/plenary.nvim"       -- funções lua
-  use "ellisonleao/gruvbox.nvim"    -- tema
+
+  -- colorscheme
+  use "ellisonleao/gruvbox.nvim"
+
+  -- auto complets
+  use "hrsh7th/cmp-buffer"          -- auto complete buffer
+  use "hrsh7th/cmp-cmdline"         -- auto complete cmd
+  use "hrsh7th/cmp-path"            -- auto complete path
+  use "saadparwaiz1/cmp_luasnip"    -- auto complette snippets
+  use "hrsh7th/nvim-cmp"            -- auto complete plugin
+  
+  -- snippets
+  use "L3MON4D3/LuaSnip"              -- snippet engine
+  use "rafamadriz/friendly-snippets"  -- snippets 
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
