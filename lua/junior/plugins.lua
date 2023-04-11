@@ -1,4 +1,4 @@
-local fn = vim.fn
+local fn = vim.fn     -- (vim function)
 
 -- Instala packer.nvim
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
@@ -44,9 +44,7 @@ packer.init {
 return packer.startup(function(use)
   use "wbthomason/packer.nvim"      -- gerencia plugins
   use "nvim-lua/plenary.nvim"       -- funções lua
-
-
-
+  use "ellisonleao/gruvbox.nvim"    -- tema
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
