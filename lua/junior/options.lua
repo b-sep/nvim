@@ -29,7 +29,6 @@ local options = {
   signcolumn = "yes",                      -- sempre mostra coluna de sinalização (antes dos números), caso contrário o texto mudaria
   wrap = true,                             -- quebra linha caso seja mais que a largura da tela
   scrolloff = 8,                           -- mínimo de linhas acima e abaixo da linha atual
-  guifont = "monospace:h17",               -- fonte
   eol = true,                              -- adiciona uma linha em branco no final do arquivo
   termguicolors = true                     -- habilita cores 24-bits
 }
