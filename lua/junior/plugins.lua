@@ -25,7 +25,6 @@ vim.cmd [[
   augroup end
 ]]
 
--- Usa protected call(lua) para dar require no packer
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
   return
@@ -42,22 +41,30 @@ packer.init {
 
 -- Plugins
 return packer.startup(function(use)
-  use "wbthomason/packer.nvim"      -- gerencia plugins
-  use "nvim-lua/plenary.nvim"       -- funções lua
+  use "wbthomason/packer.nvim"                                       -- gerencia plugins
+  use "nvim-lua/plenary.nvim"                                        -- funções lua
 
   -- colorscheme
   use "ellisonleao/gruvbox.nvim"
 
   -- auto complets
-  use "hrsh7th/cmp-buffer"          -- auto complete buffer
-  use "hrsh7th/cmp-cmdline"         -- auto complete cmd
-  use "hrsh7th/cmp-path"            -- auto complete path
-  use "saadparwaiz1/cmp_luasnip"    -- auto complette snippets
-  use "hrsh7th/nvim-cmp"            -- auto complete plugin
-  
+  use "hrsh7th/cmp-buffer"                                           -- auto complete buffer
+  use "hrsh7th/cmp-cmdline"                                          -- auto complete cmd
+  use "hrsh7th/cmp-path"                                             -- auto complete path
+  use "hrsh7th/cmp-nvim-lsp"                                         -- auto complete lsp
+  use "hrsh7th/cmp-nvim-lua"                                         -- auto complete (vim. #)
+  use "saadparwaiz1/cmp_luasnip"                                     -- auto complette snippets
+  use "hrsh7th/nvim-cmp"                                             -- auto complete plugin
+
   -- snippets
-  use "L3MON4D3/LuaSnip"              -- snippet engine
-  use "rafamadriz/friendly-snippets"  -- snippets 
+  use "L3MON4D3/LuaSnip"                                             -- snippet engine
+  use "rafamadriz/friendly-snippets"                                 -- snippets 
+
+  -- LSP
+  use { "williamboman/mason.nvim", run = ":MasonUpdate" }            -- package manager para LSP's
+  use "williamboman/mason-lspconfig.nvim"                            -- 
+  use "neovim/nvim-lspconfig"                                        -- habilita LSP
+  use "RRethy/vim-illuminate"                                        -- highlight
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

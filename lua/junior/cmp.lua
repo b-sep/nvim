@@ -83,17 +83,18 @@ cmp.setup {
       vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
 
       vim_item.menu = ({
-        buffer = "[Buffer]",
         nvim_lsp = "[LSP]",
-        luasnip = "[LuaSnip]",
-        nvim_lua = "[Lua]",
-        latex_symbols = "[LaTeX]",
+        nvim_lua = "[NVIM_LUA]",
+        luasnip = "[Snippet]",
+        buffer = "[Buffer]",
         path = "[Path]",
       })[entry.source.name]
       return vim_item
     end
   },
   sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'nvim_lua' },
     { name = 'luasnip' },
     { name = 'buffer'},
     { name = 'path' },
