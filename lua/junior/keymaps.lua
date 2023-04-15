@@ -19,8 +19,8 @@ keymap("n", "<C-h>", "<C-w>h", opts)                     -- mapeia ctrl + h para
 keymap("n", "<C-j>", "<C-w>j", opts)                     -- mapeia ctrl + j para ir para a janela abaixo
 keymap("n", "<C-k>", "<C-w>k", opts)                     -- mapeia ctrl + k para ir para a janela de cima
 keymap("n", "<C-l>", "<C-w>l", opts)                     -- mapeia ctrl + l para ir para a janela da direita
-keymap("n", "<C-s>", ":w<CR>", opts)                     -- mapeia ctrl + s para salvar (escrever)
 keymap("n", "<leader>e", ":Lex 15<CR>", opts)            -- mapeia tecla líder(espaço) + e para abrir o explorer
+keymap("n", "<C-\\>", ":vsp<CR>", opts)                  -- split na tela verticalmente
 
 -- Redimensionar janelas
 keymap("n", "<A-h>", ":vertical resize +2<CR>", opts)    -- mapeia alt + h para redimensionar para a esquerda
@@ -38,6 +38,7 @@ keymap("i", "<A-,>", "<ESC>", opts)                      -- mapei alt + , para i
 keymap("i", "<S-Tab>", "<C-d>", opts)                    -- mapeia shit + tab para remover uma indentação
 keymap("i", "<A-k>", "<ESC>:m .-2<CR>==gi", opts)        -- move a linha para cima em modo de inserção
 keymap("i", "<A-j>", "<ESC>:m .+1<CR>==gi", opts)        -- move a linha para baixo em modo de inserção
+keymap("i", "<C-s>", "<C-o>:w<CR>", opts)                     -- mapeia ctrl + s para salvar (escrever)
 
 
 -- Modo de visualização --
