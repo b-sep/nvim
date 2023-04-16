@@ -3,11 +3,11 @@ if not status_ok then
   return
 end
 
-local servers = require("lua.junior.lsp.servers")
+local servers = require("junior.lsp.servers")
 
 for _, server in pairs(servers) do
   local opts = {}
-  local handler = require("lua.junior.lsp.handlers")
+  local handler = require("junior.lsp.handlers")
 
   opts = {
     on_attach = handler.on_attach,

@@ -8,7 +8,7 @@ if not status_mason_lspconfig_ok then
   return
 end
 
-local servers = require("lua.junior.lsp.servers")
+local servers = require('junior.lsp.servers')
 
 mason.setup()
 
