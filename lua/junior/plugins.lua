@@ -77,6 +77,7 @@ return packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+  use 'mrjones2014/nvim-ts-rainbow'                                   --
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
