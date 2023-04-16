@@ -21,6 +21,9 @@ keymap("n", "<C-k>", "<C-w>k", opts)                     -- mapeia ctrl + k para
 keymap("n", "<C-l>", "<C-w>l", opts)                     -- mapeia ctrl + l para ir para a janela da direita
 keymap("n", "<leader>e", ":Lex 15<CR>", opts)            -- mapeia tecla líder(espaço) + e para abrir o explorer
 keymap("n", "<C-\\>", ":vsp<CR>", opts)                  -- split na tela verticalmente
+keymap("n", "<C-s>", ":w<CR>", opts)                     -- salva o arquivo
+keymap("n", "<C-e>", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
+keymap("n", "<C-F>", "<cmd>Telescope live_grep <cr>", opts)
 
 -- Redimensionar janelas
 keymap("n", "<A-h>", ":vertical resize +2<CR>", opts)    -- mapeia alt + h para redimensionar para a esquerda
@@ -38,12 +41,13 @@ keymap("i", "<A-,>", "<ESC>", opts)                      -- mapei alt + , para i
 keymap("i", "<S-Tab>", "<C-d>", opts)                    -- mapeia shit + tab para remover uma indentação
 keymap("i", "<A-k>", "<ESC>:m .-2<CR>==gi", opts)        -- move a linha para cima em modo de inserção
 keymap("i", "<A-j>", "<ESC>:m .+1<CR>==gi", opts)        -- move a linha para baixo em modo de inserção
-keymap("i", "<C-s>", "<C-o>:w<CR>", opts)                     -- mapeia ctrl + s para salvar (escrever)
-
+keymap("i", "<C-s>", "<C-o>:w<CR>", opts)                -- salva o arquivo
+keymap("i", "<C-e>", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
+keymap("i", "<C-F>", "<cmd>Telescope live_grep <cr>", opts)
 
 -- Modo de visualização --
 keymap("v", "<S-Tab>", "<gv", opts)                      -- mapeia < para mover a linha e continuar no modo visual
 keymap("v", "<tab>", ">gv", opts)                        -- mapeia > para mover a linha e continuar no modo visual
 keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)           -- move a linha para baixo
 keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)           -- move a linha para cima
-keymap("v", "p", '"_dP"', opts)                          -- 
+keymap("v", "p", '"_dP"', opts)                          --

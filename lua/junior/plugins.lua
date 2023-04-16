@@ -42,7 +42,6 @@ packer.init {
 -- Plugins
 return packer.startup(function(use)
   use "wbthomason/packer.nvim"                                       -- gerencia plugins
-  use "nvim-lua/plenary.nvim"                                        -- funções lua
 
   -- colorscheme
   use "ellisonleao/gruvbox.nvim"
@@ -65,6 +64,13 @@ return packer.startup(function(use)
   use "williamboman/mason-lspconfig.nvim"                            -- 
   use "neovim/nvim-lspconfig"                                        -- habilita LSP
   use "RRethy/vim-illuminate"                                        -- highlight
+
+  -- Telescope
+  use {
+    'nvim-telescope/telescope.nvim', branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }    -- telescope 'sorter'
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
