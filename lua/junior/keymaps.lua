@@ -16,14 +16,15 @@ vim.g.mapleader = ' '
 
 -- Modo normal --
 keymap("n", "<C-h>", "<C-w>h", opts)                     -- mapeia ctrl + h para ir para a janela da esquerda
+keymap("n", "<C-l>", "<C-w>l", opts)                     -- mapeia ctrl + l para ir para a janela da direita
 keymap("n", "<C-j>", "<C-w>j", opts)                     -- mapeia ctrl + j para ir para a janela abaixo
 keymap("n", "<C-k>", "<C-w>k", opts)                     -- mapeia ctrl + k para ir para a janela de cima
-keymap("n", "<C-l>", "<C-w>l", opts)                     -- mapeia ctrl + l para ir para a janela da direita
 keymap("n", "<leader>e", ":Lex 15<CR>", opts)            -- mapeia tecla líder(espaço) + e para abrir o explorer
 keymap("n", "<C-\\>", ":vsp<CR>", opts)                  -- split na tela verticalmente
 keymap("n", "<C-s>", ":w<CR>", opts)                     -- salva o arquivo
 keymap("n", "<C-e>", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
 keymap("n", "<C-F>", "<cmd>Telescope live_grep <cr>", opts)
+keymap("n", "<C-w>", ":bd<CR>", opts)                    -- fecha todas as instancias do buffer atual
 
 -- Redimensionar janelas
 keymap("n", "<A-h>", ":vertical resize +2<CR>", opts)    -- mapeia alt + h para redimensionar para a esquerda
