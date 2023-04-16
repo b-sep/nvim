@@ -72,6 +72,12 @@ return packer.startup(function(use)
   }
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }    -- telescope 'sorter'
 
+  -- Treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
