@@ -55,6 +55,9 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip"                                     -- auto complette snippets
   use "hrsh7th/nvim-cmp"                                             -- auto complete plugin
 
+  -- auto pair
+  use "windwp/nvim-autopairs"                                        --
+
   -- snippets
   use "L3MON4D3/LuaSnip"                                             -- snippet engine
   use "rafamadriz/friendly-snippets"                                 -- snippets 
