@@ -44,7 +44,7 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim"                                       -- gerencia plugins
 
   -- colorscheme
-  use 'Mofiqul/vscode.nvim'                                          --
+  use 'Mofiqul/vscode.nvim'
 
   -- auto complets
   use "hrsh7th/cmp-buffer"                                           -- auto complete buffer
@@ -56,7 +56,10 @@ return packer.startup(function(use)
   use "hrsh7th/nvim-cmp"                                             -- auto complete plugin
 
   -- auto pair
-  use "windwp/nvim-autopairs"                                        --
+  use "windwp/nvim-autopairs"
+
+  -- comment
+  use 'numToStr/Comment.nvim'
 
   -- snippets
   use "L3MON4D3/LuaSnip"                                             -- snippet engine
@@ -64,7 +67,7 @@ return packer.startup(function(use)
 
   -- LSP
   use { "williamboman/mason.nvim", run = ":MasonUpdate" }            -- package manager para LSP's
-  use "williamboman/mason-lspconfig.nvim"                            -- 
+  use "williamboman/mason-lspconfig.nvim"
   use "neovim/nvim-lspconfig"                                        -- habilita LSP
   use "RRethy/vim-illuminate"                                        -- highlight
 
@@ -76,8 +79,8 @@ return packer.startup(function(use)
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }    -- telescope 'sorter'
 
   -- Treesitter
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }        --
-  use 'mrjones2014/nvim-ts-rainbow'                                   --
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'mrjones2014/nvim-ts-rainbow'
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
