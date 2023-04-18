@@ -1,19 +1,19 @@
 local fn = vim.fn     -- (vim function)
 
 -- Instala packer.nvim
-local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+local install_path = fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system {
-    "git",
-    "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
+    'git',
+    'clone',
+    '--depth',
+    '1',
+    'https://github.com/wbthomason/packer.nvim',
     install_path,
   }
 
-  print "Instando packer.nvim.."
+  print 'Instando packer.nvim..'
   vim.cmd [[packadd packer.nvim]]
 end
 
@@ -25,7 +25,7 @@ vim.cmd [[
   augroup end
 ]]
 
-local status_ok, packer = pcall(require, "packer")
+local status_ok, packer = pcall(require, 'packer')
 if not status_ok then
   return
 end
@@ -34,42 +34,42 @@ end
 packer.init {
   display = {
     open_fn = function()
-      return require("packer.util").float { border = "rounded" }
+      return require('packer.util').float { border = 'rounded' }
     end,
   },
 }
 
 -- Plugins
 return packer.startup(function(use)
-  use "wbthomason/packer.nvim"                                       -- gerencia plugins
+  use 'wbthomason/packer.nvim'                                       -- gerencia plugins
 
   -- colorscheme
   use 'Mofiqul/vscode.nvim'
 
   -- auto complets
-  use "hrsh7th/cmp-buffer"                                           -- auto complete buffer
-  use "hrsh7th/cmp-cmdline"                                          -- auto complete cmd
-  use "hrsh7th/cmp-path"                                             -- auto complete path
-  use "hrsh7th/cmp-nvim-lsp"                                         -- auto complete lsp
-  use "hrsh7th/cmp-nvim-lua"                                         -- auto complete (vim. #)
-  use "saadparwaiz1/cmp_luasnip"                                     -- auto complette snippets
-  use "hrsh7th/nvim-cmp"                                             -- auto complete plugin
+  use 'hrsh7th/cmp-buffer'                                           -- auto complete buffer
+  use 'hrsh7th/cmp-cmdline'                                          -- auto complete cmd
+  use 'hrsh7th/cmp-path'                                             -- auto complete path
+  use 'hrsh7th/cmp-nvim-lsp'                                         -- auto complete lsp
+  use 'hrsh7th/cmp-nvim-lua'                                         -- auto complete (vim. #)
+  use 'saadparwaiz1/cmp_luasnip'                                     -- auto complette snippets
+  use 'hrsh7th/nvim-cmp'                                             -- auto complete plugin
 
   -- auto pair
-  use "windwp/nvim-autopairs"
+  use 'windwp/nvim-autopairs'
 
   -- comment
   use 'numToStr/Comment.nvim'
 
   -- snippets
-  use "L3MON4D3/LuaSnip"                                             -- snippet engine
-  use "rafamadriz/friendly-snippets"                                 -- snippets 
+  use 'L3MON4D3/LuaSnip'                                             -- snippet engine
+  use 'rafamadriz/friendly-snippets'                                 -- snippets 
 
   -- LSP
-  use { "williamboman/mason.nvim", run = ":MasonUpdate" }            -- package manager para LSP's
-  use "williamboman/mason-lspconfig.nvim"
-  use "neovim/nvim-lspconfig"                                        -- habilita LSP
-  use "RRethy/vim-illuminate"                                        -- highlight
+  use { 'williamboman/mason.nvim', run = ':MasonUpdate' }            -- package manager para LSP's
+  use 'williamboman/mason-lspconfig.nvim'
+  use 'neovim/nvim-lspconfig'                                        -- habilita LSP
+  use 'RRethy/vim-illuminate'                                        -- highlight
 
   -- Telescope
   use {
@@ -82,7 +82,10 @@ return packer.startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'mrjones2014/nvim-ts-rainbow'
 
+  -- Gitsigns
+  use 'lewis6991/gitsigns.nvim'
+
   if PACKER_BOOTSTRAP then
-    require("packer").sync()
+    require('packer').sync()
   end
 end)
