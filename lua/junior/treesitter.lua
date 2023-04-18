@@ -5,6 +5,9 @@ end
 
 configs.setup {
   ensure_installed = "all",
+  indent = {
+    enable = true
+  },
   sync_install = false,
   auto_install = true,
   highlight = {
