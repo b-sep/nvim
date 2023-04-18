@@ -93,6 +93,10 @@ nvim_tree.setup {
       },
     },
   },
+  git = {
+    enable = true,
+    ignore = false,
+  },
   diagnostics = {
     enable = true,
     show_on_dirs = true,
