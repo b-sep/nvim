@@ -85,6 +85,9 @@ return packer.startup(function(use)
   -- Gitsigns
   use 'lewis6991/gitsigns.nvim'
 
+  -- Nvim.tree
+  use { 'nvim-tree/nvim-tree.lua', requires = { 'nvim-tree/nvim-web-devicons' } }
+
   if PACKER_BOOTSTRAP then
     require('packer').sync()
   end

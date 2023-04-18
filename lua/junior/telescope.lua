@@ -8,7 +8,6 @@ require("telescope").setup{
 
     mapping = {
       i = {
-        ["<C-c>"] = actions.close,
         ["<C-x>"] = actions.select_horizontal,
         ["<C-v>"] = actions.select_vertical,
       },
