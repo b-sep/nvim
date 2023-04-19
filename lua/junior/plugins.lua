@@ -91,6 +91,9 @@ return packer.startup(function(use)
   -- Bufferline
   use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
 
+  -- Indent-blankline
+  use "lukas-reineke/indent-blankline.nvim"
+
   if PACKER_BOOTSTRAP then
     require('packer').sync()
   end
