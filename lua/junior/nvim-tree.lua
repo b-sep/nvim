@@ -69,6 +69,8 @@ nvim_tree.setup {
   renderer = {
     root_folder_label = false,
     icons = {
+      git_placement = 'after',
+      modified_placement = 'after',
       glyphs = {
         default = "",
         symlink = "",
@@ -83,7 +85,7 @@ nvim_tree.setup {
           symlink_open = "",
         },
         git = {
-          unstaged = "",
+          unstaged = "M",
           staged = "S",
           unmerged = "",
           renamed = "➜",
