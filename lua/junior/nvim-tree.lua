@@ -67,6 +67,7 @@ nvim_tree.setup {
     update_root = true,
   },
   renderer = {
+    root_folder_label = false,
     icons = {
       glyphs = {
         default = "",
