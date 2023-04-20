@@ -6,6 +6,6 @@ end
 comment.setup({
   ignore = '^$',
   opleader = {
-    line = '<C-_>'
+    line = '<C-_>'  -- significa ctrl + /
   }
 })

@@ -97,6 +97,9 @@ return packer.startup(function(use)
   -- Lualine
   use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons' } }
 
+  -- ToggleTerm
+  use ''
+
   if PACKER_BOOTSTRAP then
     require('packer').sync()
   end
