@@ -21,6 +21,7 @@ keymap("n", "<C-j>", "<C-w>j", opts)                     -- mapeia ctrl + j para
 keymap("n", "<C-k>", "<C-w>k", opts)                     -- mapeia ctrl + k para ir para a janela de cima
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)    -- mapeia tecla líder(espaço) + e para abrir o explorer
 keymap("n", "<leader>q", ":q<CR>", opts)
+keymap("n", "<leader>h", ":h", opts)
 keymap("n", "<C-\\>", ":vsp<CR>", opts)                  -- split na tela verticalmente
 keymap("n", "<C-s>", ":w<CR>", opts)                     -- salva o arquivo
 keymap("n", "<C-e>", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)

@@ -94,6 +94,9 @@ return packer.startup(function(use)
   -- Indent-blankline
   use "lukas-reineke/indent-blankline.nvim"
 
+  -- Lualine
+  use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons' } }
+
   if PACKER_BOOTSTRAP then
     require('packer').sync()
   end
