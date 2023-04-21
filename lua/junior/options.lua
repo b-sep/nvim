@@ -30,7 +30,8 @@ local options = {
   wrap = true,                             -- quebra linha caso seja mais que a largura da tela
   scrolloff = 8,                           -- mínimo de linhas acima e abaixo da linha atual
   eol = true,                              -- adiciona uma linha em branco no final do arquivo
-  termguicolors = true                     -- habilita cores 24-bits
+  termguicolors = true,                    -- habilita cores 24-bits
+  background = 'dark'                      -- background dark
 }
 
 for k, v in pairs(options) do
