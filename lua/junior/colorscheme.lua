@@ -1,13 +1,17 @@
-local c = require('vscode.colors').get_colors()
+local status_ok, gh_theme = pcall(require, 'github-theme')
+if not status_ok then
+  return
+end
 
-require('vscode').setup({
-  italic_comments = false,
-
-  group_overrides = {
-    -- this supports the same val table as vim.api.nvim_set_hl
-    -- use colors from this colorscheme by requiring vscode.colors!
-    Cursor = { fg = c.vscDarkBlue, bg = c.vscLightGreen, bold = true },
+gh_theme.setup({
+  options = {
+    styles = {
+      comments = 'NONE',
+      functions = 'NONE',
+      keywords = 'NONE',
+      variables = 'NONE',
+    }
   }
 })
 
-require('vscode').load()
+vim.cmd('colorscheme github_dark')

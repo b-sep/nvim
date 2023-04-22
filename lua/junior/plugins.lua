@@ -44,7 +44,7 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim'                                       -- gerencia plugins
 
   -- colorscheme
-  use 'Mofiqul/vscode.nvim'
+  use ({ 'projekt0n/github-nvim-theme' })
 
   -- auto complets
   use 'hrsh7th/cmp-buffer'                                           -- auto complete buffer
