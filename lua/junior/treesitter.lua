@@ -19,4 +19,12 @@ configs.setup {
     extended_mode = true,
     max_file_lines = nil
   },
+  playground = {
+    enable = true
+  },
+  query_linter = {
+    enable = true,
+    use_virtual_text = true,
+    lint_events = { 'BufWrite', 'CursorHold' }
+  }
 }

@@ -103,6 +103,9 @@ return packer.startup(function(use)
   -- Colorizer
   use 'norcalli/nvim-colorizer.lua'
 
+  -- Treesitter playground
+  use 'nvim-treesitter/playground'
+
   if PACKER_BOOTSTRAP then
     require('packer').sync()
   end
