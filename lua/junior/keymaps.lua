@@ -42,7 +42,7 @@ keymap("i", "<A-,>", "<ESC>", opts)                      -- mapei alt + , para i
 keymap("i", "<S-Tab>", "<C-d>", opts)                    -- mapeia shit + tab para remover uma indentação
 keymap("i", "<A-k>", "<ESC>:m .-2<CR>==gi", opts)        -- move a linha para cima em modo de inserção
 keymap("i", "<A-j>", "<ESC>:m .+1<CR>==gi", opts)        -- move a linha para baixo em modo de inserção
-keymap("i", "<C-s>", "<C-o>:w<CR>", opts)                -- salva o arquivo
+keymap("i", "<C-s>", "<ESC>:w<CR>", opts)                -- salva o arquivo
 keymap("i", "<C-e>", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
 keymap("i", "<C-f>", "<cmd>Telescope live_grep <cr>", opts)
 vim.keymap.set("i", "<C-_>", function() require('Comment.api').toggle.linewise.current() end, opts) -- commentario com ctrl / no modo de inserção
