@@ -44,7 +44,7 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim'                                       -- gerencia plugins
 
   -- colorscheme
-  use ({ 'projekt0n/github-nvim-theme' })
+  use "olimorris/onedarkpro.nvim"
 
   -- auto complets
   use 'hrsh7th/cmp-buffer'                                           -- auto complete buffer
