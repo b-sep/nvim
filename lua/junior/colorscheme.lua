@@ -1,8 +1,12 @@
-local status_ok, onedarkpro = pcall(require, 'onedarkpro')
+local status_ok, nightfox = pcall(require, 'nightfox')
 if not status_ok then
   return
 end
 
-vim.cmd('colorscheme onedark')
+nightfox.setup({
+  options = {
+    terminal_colors = false
+  }
+})
 
-onedarkpro.setup()
+vim.cmd("colorscheme carbonfox")
