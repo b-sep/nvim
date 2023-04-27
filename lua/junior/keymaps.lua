@@ -24,7 +24,8 @@ keymap("n", "<C-k>", "<C-w>k", opts)                     -- mapeia ctrl + k para
 keymap("n", "<C-\\>", ":vsp<CR>", opts)                  -- split na tela verticalmente
 keymap("n", "<C-s>", ":w<CR>", opts)                     -- salva o arquivo
 keymap("n", "<C-e>", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
-keymap("n", "<C-f>", "<cmd>Telescope live_grep <cr>", opts)
+keymap("n", "<C-f>", "<cmd>Telescope current_buffer_fuzzy_find theme=cursor previewer=false<cr>", opts)
+keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<C-w>", ":bd<CR>", opts)                    -- fecha todas as instancias do buffer atual
 
 -- Redimensionar janelas
@@ -44,7 +45,7 @@ keymap("i", "<A-k>", "<ESC>:m .-2<CR>==gi", opts)        -- move a linha para ci
 keymap("i", "<A-j>", "<ESC>:m .+1<CR>==gi", opts)        -- move a linha para baixo em modo de inserção
 keymap("i", "<C-s>", "<ESC>:w<CR>", opts)                -- salva o arquivo
 keymap("i", "<C-e>", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
-keymap("i", "<C-f>", "<cmd>Telescope live_grep <cr>", opts)
+keymap("i", "<C-f>", "<cmd>Telescope current_buffer_fuzzy_find theme=cursor previewer=false<cr>", opts)
 vim.keymap.set("i", "<C-_>", function() require('Comment.api').toggle.linewise.current() end, opts) -- commentario com ctrl / no modo de inserção
 
 -- Modo de visualização --
