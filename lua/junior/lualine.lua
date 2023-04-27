@@ -25,5 +25,11 @@ lualine.setup({
       'diff',
       'diagnostics'
     },
+    lualine_c = {
+      {
+        'filename',
+        path = 1  -- relative path
+      }
+    }
   }
 })
