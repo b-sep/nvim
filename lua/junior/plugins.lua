@@ -17,7 +17,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
--- Recarrega o Neovim toda vez que o arquivo plugins.lua é alterado
+-- Recarrega o Neovim toda vez que o arquivo plugins.lua é salvo
 vim.cmd [[
   augroup packer_user_config
     autocmd!
@@ -48,10 +48,8 @@ return packer.startup(function(use)
 
   -- auto complets
   use 'hrsh7th/cmp-buffer'                                           -- auto complete buffer
-  use 'hrsh7th/cmp-cmdline'                                          -- auto complete cmd
   use 'hrsh7th/cmp-path'                                             -- auto complete path
   use 'hrsh7th/cmp-nvim-lsp'                                         -- auto complete lsp
-  use 'hrsh7th/cmp-nvim-lua'                                         -- auto complete (vim. #)
   use 'saadparwaiz1/cmp_luasnip'                                     -- auto complette snippets
   use 'hrsh7th/nvim-cmp'                                             -- auto complete plugin
 
@@ -61,8 +59,11 @@ return packer.startup(function(use)
   -- comment
   use 'numToStr/Comment.nvim'
 
-  -- snippets
-  use 'L3MON4D3/LuaSnip'                                             -- snippet engine
+  -- snippet engine (required by nvim-cmp)
+  use({
+    "L3MON4D3/LuaSnip",
+    tag = "v1.*"
+  })
   use 'rafamadriz/friendly-snippets'                                 -- snippets 
 
   -- LSP
