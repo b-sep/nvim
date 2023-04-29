@@ -60,6 +60,7 @@ local function on_attach(bufnr)
 end
 
 nvim_tree.setup {
+  filters = { custom = { "^.git$" } },
   on_attach = on_attach,
   update_focused_file = {
     enable = true,
