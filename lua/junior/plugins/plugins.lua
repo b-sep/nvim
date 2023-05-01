@@ -49,7 +49,6 @@ return packer.startup(function(use)
   -- auto complets
   use 'hrsh7th/cmp-buffer'                                           -- auto complete buffer
   use 'hrsh7th/cmp-path'                                             -- auto complete path
-  use 'hrsh7th/cmp-nvim-lsp'                                         -- auto complete lsp
   use 'saadparwaiz1/cmp_luasnip'                                     -- auto complette snippets
   use 'hrsh7th/nvim-cmp'                                             -- auto complete plugin
 

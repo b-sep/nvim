@@ -1,6 +1,6 @@
 require 'junior.plugins.autopairs'
 require 'junior.plugins.bufferline'
-require 'junior.plugins.cmp'
+require 'junior.plugins.cmp_nvim'
 require 'junior.plugins.colorizer'
 require 'junior.plugins.colorscheme'
 require 'junior.plugins.comment'
