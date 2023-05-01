@@ -6,7 +6,8 @@ end
 configs.setup {
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "ruby", "typescript" },
   indent = {
-    enable = true
+    enable = true,
+    disable = { 'ruby' }
   },
   sync_install = false,
   auto_install = true,
