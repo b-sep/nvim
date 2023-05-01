@@ -14,16 +14,9 @@ for _, server in pairs(servers) do
     capabilities = handler.capabilities,
   }
 
-  if server == 'lua_ls' then
-    opts = vim.tbl_deep_extend("force", {
-      settings = {
-        Lua = {
-          diagnostics = {
-            globals = { "vim" },
-          },
-        },
-      },
-    }, opts)
+  local settings_ok, settings = pcall(require, 'junior.lsp.settings.' .. server)
+  if settings_ok then
+    opts = vim.tbl_deep_extend('force', settings, opts)
   end
 
   lspconfig[server].setup(opts)
