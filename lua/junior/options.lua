@@ -33,8 +33,7 @@ local options = {
   termguicolors = true,                    -- habilita cores 24-bits
   background = 'dark',                     -- background dark
   foldlevel = 99,
-  foldmethod = 'expr',
-  foldexpr = 'nvim_treesitter#foldexpr()'
+  foldmethod = 'indent',
 }
 
 for k, v in pairs(options) do
