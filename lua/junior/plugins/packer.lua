@@ -44,7 +44,7 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim'                                       -- gerencia plugins
 
   -- colorscheme
-  use "EdenEast/nightfox.nvim"
+  use { "ellisonleao/gruvbox.nvim" }
 
   -- auto complets
   use 'hrsh7th/cmp-buffer'                                           -- auto complete buffer

@@ -41,5 +41,3 @@ for k, v in pairs(options) do
 end
 
 opt.iskeyword:append({'+', '=', '-'})      -- trata palavra por +, = ou - como uma única palavra
-
-vim.cmd "set whichwrap+=<,>,[,],h,l"       -- habilita left/right quebrar a linha e subir ou descer de linha quando chegar no final ou começo da mesma
