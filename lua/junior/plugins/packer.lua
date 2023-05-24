@@ -17,14 +17,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
--- Recarrega o Neovim toda vez que o arquivo plugins.lua é salvo
-vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]]
-
 local status_ok, packer = pcall(require, 'packer')
 if not status_ok then
   return
@@ -96,9 +88,6 @@ return packer.startup(function(use)
 
   -- Lualine
   use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons' } }
-
-  -- ToggleTerm
-  use { "akinsho/toggleterm.nvim", tag = '*' }
 
   -- Colorizer
   use 'norcalli/nvim-colorizer.lua'
