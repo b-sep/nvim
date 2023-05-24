@@ -1,29 +1,19 @@
-local status_ok, gruvbox = pcall(require, 'gruvbox')
+local status_ok, quantum = pcall(require, 'quantum')
 if not status_ok then
   return
 end
 
-gruvbox.setup({
-  undercurl = true,
-  underline = true,
-  bold = true,
-  italic = {
-    strings = false,
-    comments = false,
-    operators = false,
-    folds = false
+quantum.setup({
+  style = {
+    italics = { -- whether to use italic for the following highlight groups
+      comments = false,
+      variables = false,
+      functions = false,
+      keywords = false,
+    },
   },
-  strikethrough = true,
-  invert_selection = false,
-  invert_signs = false,
-  invert_tabline = false,
-  invert_intend_guides = false,
-  inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = "", -- can be "hard", "soft" or empty string
-  palette_overrides = {},
-  overrides = {},
-  dim_inactive = false,
-  transparent_mode = false,
+  hide_end_of_buffer = true, -- whether to show hl-EndOfBuffer
 })
 
-vim.cmd([[colorscheme gruvbox]])
+vim.g.quantum_variant = 'dark'
+vim.cmd([[colorscheme quantum]])
