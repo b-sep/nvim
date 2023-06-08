@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "ruby", "typescript" },
+  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "ruby", "typescript", "python"},
   indent = {
     enable = true,
     disable = { 'ruby' }

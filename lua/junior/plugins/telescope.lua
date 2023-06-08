@@ -17,6 +17,10 @@ require("telescope").setup{
      },
     },
   },
-  pickers = {},
+  pickers = {
+    find_files = {
+      hidden = true
+    }
+  },
   extensions = {},
 }
