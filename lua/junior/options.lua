@@ -23,6 +23,7 @@ local options = {
   shiftwidth = 2,                          -- quantidade de espaço inseridos para cada indentação
   tabstop = 2,                             -- insere 2 espaços a cada tab
   cursorline = true,                       -- destaca linha atual
+  cursorcolumn = true,
   number = true,                           -- mostra número da linha
   relativenumber = true,                   -- mostra número relativo a linha atual
   numberwidth = 4,                         -- tamanho da coluna de números (default é 4, apenas evidenciando)

@@ -36,7 +36,7 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim'                                       -- gerencia plugins
 
   -- colorscheme
-  use 'kjssad/quantum.vim'
+  use 'navarasu/onedark.nvim'
 
   -- auto complets
   use 'hrsh7th/cmp-buffer'                                           -- auto complete buffer
