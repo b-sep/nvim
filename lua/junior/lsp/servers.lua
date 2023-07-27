@@ -1,7 +1,8 @@
 local servers = {
   'lua_ls',
   'tsserver',
-  'solargraph'
+  'solargraph',
+  'pyright'
 }
 
 return servers
