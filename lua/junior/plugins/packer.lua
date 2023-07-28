@@ -63,6 +63,8 @@ return packer.startup(function(use)
   use 'neovim/nvim-lspconfig'                                        -- habilita LSP
   use 'RRethy/vim-illuminate'                                        -- highlight
 
+  use 'jose-elias-alvarez/null-ls.nvim'
+
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim', branch = '0.1.x',
