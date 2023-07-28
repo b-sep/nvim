@@ -74,7 +74,7 @@ return packer.startup(function(use)
 
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use 'mrjones2014/nvim-ts-rainbow'
+  use 'hiphish/rainbow-delimiters.nvim'
 
   -- Gitsigns
   use 'lewis6991/gitsigns.nvim'

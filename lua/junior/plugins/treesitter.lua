@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "ruby", "typescript", "python"},
+  ensure_installed = { 'c', 'lua', 'vim', 'vimdoc', 'query', 'ruby', 'typescript', 'python' },
   indent = {
     enable = true,
     disable = { 'ruby' }
@@ -14,11 +14,6 @@ configs.setup {
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,
-  },
-  rainbow = {
-    enable = true,
-    extended_mode = true,
-    max_file_lines = nil
   },
   playground = {
     enable = true
