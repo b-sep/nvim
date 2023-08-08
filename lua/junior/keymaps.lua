@@ -46,6 +46,7 @@ keymap("i", "<A-j>", "<ESC>:m .+1<CR>==gi", opts)        -- move a linha para ba
 keymap("i", "<C-s>", "<ESC>:w<CR>", opts)                -- salva o arquivo
 keymap("i", "<C-e>", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
 keymap("i", "<C-f>", "<cmd>Telescope current_buffer_fuzzy_find theme=cursor previewer=false<cr>", opts)
+keymap("i", "<A-z>", "<ESC>:set wrap!<CR>==gi", opts)
 vim.keymap.set("i", "<C-_>", function() require('Comment.api').toggle.linewise.current() end, opts) -- commentario com ctrl / no modo de inserção
 
 -- Modo de visualização --
