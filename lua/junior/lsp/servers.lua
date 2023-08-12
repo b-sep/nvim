@@ -1,8 +1,9 @@
 local servers = {
+  'clangd',
   'lua_ls',
-  'tsserver',
+  'pyright',
   'solargraph',
-  'pyright'
+  'tsserver'
 }
 
 return servers
