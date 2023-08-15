@@ -26,6 +26,7 @@ keymap("n", "<C-s>", ":w<CR>", opts)                     -- salva o arquivo
 keymap("n", "<C-e>", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
 keymap("n", "<C-f>", "<cmd>Telescope current_buffer_fuzzy_find theme=cursor previewer=false<cr>", opts)
 keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<A-z>", ":set wrap!<CR>", opts)
 keymap("n", "<C-w>", ":bd<CR>", opts)                    -- fecha todas as instancias do buffer atual
 
 -- Redimensionar janelas
