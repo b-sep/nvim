@@ -9,9 +9,7 @@ if not snip_status_ok then
 end
 
 -- https://github.com/rafamadriz/friendly-snippets
-require('luasnip/loaders/from_vscode').lazy_load({
-  exclude = { 'ruby' }
-})
+require('luasnip/loaders/from_vscode').lazy_load()
 
 local check_backspace = function()
   local col = vim.fn.col '.' - 1
