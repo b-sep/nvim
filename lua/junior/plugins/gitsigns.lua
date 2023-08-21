@@ -11,4 +11,9 @@ gitsigns.setup({
     topdelete = { text = '▎' },
     changedelete = { text = '▎' }
   },
+  current_line_blame = false,
+  current_line_blame_opts = {
+    delay = 1000
+  },
+  current_line_blame_formatter = '<author>, <author_time:%d-%m-%Y> - <summary>'
 })
