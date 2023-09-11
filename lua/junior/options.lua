@@ -33,8 +33,9 @@ local options = {
   eol = true,                              -- adiciona uma linha em branco no final do arquivo
   termguicolors = true,                    -- habilita cores 24-bits
   background = 'dark',                     -- background dark
-  foldlevel = 99,
   foldmethod = 'indent',
+  foldexpr = 'nvim_treesitter#foldexpr()',
+  foldenable = false
 }
 
 for k, v in pairs(options) do
