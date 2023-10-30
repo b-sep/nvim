@@ -1,14 +1,6 @@
--- Modes
-  --  normal_mode = 'n'
-  --  insert_mode = 'i'
-  --  visual_mode = 'v'
-  --  visual_block_mode = 'x'
-  --  term_mode = 't'
-  --  command_mode = 'c'
-
 local opts = { noremap = true, silent = true }           -- noremap (mapeia SEM recursividade), silent (mapeia sem output)
-
 local keymap = vim.api.nvim_set_keymap                   -- configura um mapeamento global para o modo informado
+local builtin = require('telescope.builtin')
 
 -- Configura tecla principal
 keymap('', "<Space>", "<Nop>", opts)
@@ -23,11 +15,12 @@ keymap("n", "<C-j>", "<C-w>j", opts)                     -- mapeia ctrl + j para
 keymap("n", "<C-k>", "<C-w>k", opts)                     -- mapeia ctrl + k para ir para a janela de cima
 keymap("n", "<C-\\>", ":vsp<CR>", opts)                  -- split na tela verticalmente
 keymap("n", "<C-s>", ":w<CR>", opts)                     -- salva o arquivo
-keymap("n", "<C-e>", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
-keymap("n", "<C-f>", "<cmd>Telescope current_buffer_fuzzy_find theme=cursor previewer=false<cr>", opts)
-keymap("n", "<leader>f", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<A-z>", ":set wrap!<CR>", opts)
 keymap("n", "<C-w>", ":bd<CR>", opts)                    -- fecha todas as instancias do buffer atual
+vim.keymap.set('n', '<C-e>', builtin.find_files, opts)
+vim.keymap.set('n', '<leader>f', builtin.live_grep, opts)
+vim.keymap.set('n', '<C-f>', builtin.current_buffer_fuzzy_find, opts)
+vim.keymap.set('n', 'F', builtin.buffers, opts)
 
 -- Redimensionar janelas
 keymap("n", "<A-h>", ":vertical resize +2<CR>", opts)    -- mapeia alt + h para redimensionar para a esquerda
