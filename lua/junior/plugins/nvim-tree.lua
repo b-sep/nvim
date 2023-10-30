@@ -10,7 +10,6 @@ local function on_attach(bufnr)
     return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
   end
 
-  vim.keymap.set('n', '<C-e>', "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",     opts('Open telescope'))
   vim.keymap.set('n', '<C-k>', api.node.show_info_popup,              opts('Info'))
   vim.keymap.set('n', '<C-r>', api.fs.rename_sub,                     opts('Rename: Omit Filename'))
   vim.keymap.set('n', '<C-v>', api.node.open.vertical,                opts('Open: Vertical Split'))
