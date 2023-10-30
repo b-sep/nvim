@@ -3,7 +3,7 @@ local actions = require "telescope.actions"
 require("telescope").setup{
   defaults = {
     file_ignore_patterns = { "%.git/.", "node_modules" },
-    prompt_prefix = " ",
+    prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "truncate" },
     layout_strategy = "center",
