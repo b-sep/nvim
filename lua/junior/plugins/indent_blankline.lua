@@ -3,12 +3,13 @@ if not status_ok then
   return
 end
 
-indent_blankline.setup()
-
--- indent_blankline.setup {
---   char = "▏",
---   char_blankline = "▏",
---   show_current_context = true,
---   show_trailing_blankline_indent = false,
---   use_treesitter = true,
--- }
+indent_blankline.setup({
+  debounce = 100,
+  indent = {
+    char = "▏"
+  },
+  scope = {
+    show_start = false,
+    show_end = false
+  }
+})
