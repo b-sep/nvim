@@ -42,7 +42,12 @@ require("telescope").setup{
     },
     buffers = {
       theme = "dropdown",
-      previewer = false
+      previewer = false,
+      mappings = {
+        i = {
+          ["<C-d>"] = actions.delete_buffer
+        }
+      }
     },
     git_files = {
       hidden = true,
