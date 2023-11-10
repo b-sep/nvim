@@ -43,6 +43,7 @@ require("telescope").setup{
     buffers = {
       theme = "dropdown",
       previewer = false,
+      sort_mru = true,
       mappings = {
         i = {
           ["<C-d>"] = actions.delete_buffer
