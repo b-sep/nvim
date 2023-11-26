@@ -10,6 +10,12 @@ indent_blankline.setup({
   },
   scope = {
     show_start = false,
-    show_end = false
+    show_end = false,
+    include = {
+      node_type = {
+        ruby = { "if", "unless" },
+        lua = { "table_constructor" }
+      }
+    }
   }
 })
