@@ -36,7 +36,7 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim'                                       -- gerencia plugins
 
   -- colorscheme
-  use 'navarasu/onedark.nvim'
+  use { 'catppuccin/nvim', as = 'catppuccin' }
 
   -- auto complets
   use 'hrsh7th/nvim-cmp'                                             -- auto complete plugin
