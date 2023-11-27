@@ -1,6 +1,6 @@
 return {
   'RRethy/nvim-treesitter-endwise',
-  event = "InsertEnter",
+  ft = "ruby",
   config = function()
     require('nvim-treesitter.configs').setup {
       endwise = {
