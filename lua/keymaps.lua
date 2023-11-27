@@ -2,10 +2,6 @@ local opts = { noremap = true, silent = true }           -- noremap (mapeia SEM 
 local keymap = vim.api.nvim_set_keymap                   -- configura um mapeamento global para o modo informado
 local builtin = require('telescope.builtin')
 
--- Configura tecla principal
-keymap('', "<Space>", "<Nop>", opts)
-vim.g.mapleader = ' '
-
 -- Modo normal --
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)    -- mapeia tecla líder(espaço) + e para abrir o explorer
 keymap("n", "<leader>q", ":q<CR>", opts)
@@ -33,7 +29,6 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Modo de inserção --
-keymap("i", "<A-,>", "<ESC>", opts)                      -- mapei alt + , para ir para o modo normal
 keymap("i", "<S-Tab>", "<C-d>", opts)                    -- mapeia shit + tab para remover uma indentação
 keymap("i", "<A-k>", "<ESC>:m .-2<CR>==gi", opts)        -- move a linha para cima em modo de inserção
 keymap("i", "<A-j>", "<ESC>:m .+1<CR>==gi", opts)        -- move a linha para baixo em modo de inserção

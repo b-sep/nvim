@@ -1,4 +1,4 @@
-require 'junior.options'
-require 'junior.keymaps'
-require 'junior.plugins'
-require 'junior.lsp'
+require 'options'
+require 'lazy_nvim'
+require 'keymaps'
+require 'lsp'

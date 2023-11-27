@@ -1,11 +1,16 @@
 local opt = vim.opt -- (set vimscript)
 
+-- Configura tecla principal
+local opts = { noremap = true, silent = true }
+vim.api.nvim_set_keymap('', "<Space>", "<Nop>", opts)
+vim.g.mapleader = ' '
+
 local options = {
   backup = false,                          -- não gera backup
   clipboard = "unnamedplus",               -- da acesso ao clipboard do sistema ao neovim
   cmdheight = 1,                           -- espaço na linha de comando do neovim
   completeopt = { "menuone", "noselect" }, -- lista de comandos separada por vírgula (insert mode)
-  conceallevel = 2,                        -- torna `` visivel em arquivos markdown
+  conceallevel = 0,                        -- torna aspas visíveis em json files
   ignorecase = true,                       -- ignora case em buscas
   mouse = '',                              -- desabilita mouse
   pumheight = 10,                          -- número máximo de itens para aparecer em menu popup
@@ -35,7 +40,7 @@ local options = {
   background = 'dark',                     -- background dark
   foldmethod = 'indent',
   foldexpr = 'nvim_treesitter#foldexpr()',
-  foldenable = false
+  foldenable = false,
 }
 
 for k, v in pairs(options) do

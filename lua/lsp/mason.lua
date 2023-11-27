@@ -8,7 +8,7 @@ if not status_mason_lspconfig_ok then
   return
 end
 
-local servers = require('junior.lsp.servers')
+local servers = require('lsp.servers')
 
 mason.setup()
 
@@ -20,14 +20,14 @@ mason_lsp_config.setup({
 mason_lsp_config.setup_handlers({
   function(server_name)
     local opts = {}
-    local handler = require("junior.lsp.handlers")
+    local handler = require("lsp.handlers")
 
     opts = {
       on_attach = handler.on_attach,
       capabilities = handler.capabilities,
     }
 
-    local settings_ok, settings = pcall(require, 'junior.lsp.settings.' .. server_name)
+    local settings_ok, settings = pcall(require, 'lsp.settings.' .. server_name)
     if settings_ok then
       opts = vim.tbl_deep_extend('force', settings, opts)
     end
