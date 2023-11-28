@@ -8,7 +8,7 @@ return {
       ensure_installed = { 'c', 'lua', 'vim', 'vimdoc', 'query', 'ruby', 'typescript', 'python', 'elixir', 'heex', 'javascript', 'html', 'css' },
       indent = {
         enable = true,
-        disable = { 'ruby' }
+        disable = { 'ruby', 'css' }
       },
       sync_install = false,
       auto_install = true,
