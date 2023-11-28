@@ -63,7 +63,7 @@ return {
     end
 
     nvim_tree.setup {
-      filters = { custom = { "^.git$" } },
+      filters = { custom = { '^.git$' } },
       on_attach = on_attach,
       update_focused_file = {
         enable = true,
@@ -75,26 +75,26 @@ return {
           git_placement = 'after',
           modified_placement = 'after',
           glyphs = {
-            default = "",
-            symlink = "",
+            default = '',
+            symlink = '',
             folder = {
-              arrow_open = "",
-              arrow_closed = "",
-              default = "",
-              open = "",
-              empty = "",
-              empty_open = "",
-              symlink = "",
-              symlink_open = "",
+              arrow_open = '',
+              arrow_closed = '',
+              default = '',
+              open = '',
+              empty = '',
+              empty_open = '',
+              symlink = '',
+              symlink_open = '',
             },
             git = {
-              unstaged = "M",
-              staged = "S",
-              unmerged = "",
-              renamed = "➜",
-              untracked = "U",
-              deleted = "",
-              ignored = "◌",
+              unstaged = 'M',
+              staged = 'S',
+              unmerged = '',
+              renamed = '➜',
+              untracked = 'U',
+              deleted = '',
+              ignored = '◌',
             },
           },
         },
@@ -105,12 +105,12 @@ return {
       },
       diagnostics = {
         enable = true,
-        show_on_dirs = true,
+        show_on_dirs = false,
         icons = {
-          hint = "",
-          info = "",
-          warning = "",
-          error = "",
+          hint = ' ',
+          info = ' ',
+          warning = ' ',
+          error = ' ',
         },
       }
     }
