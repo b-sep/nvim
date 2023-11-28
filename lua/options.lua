@@ -1,8 +1,7 @@
 local opt = vim.opt -- (set vimscript)
 
 -- Configura tecla principal
-local opts = { noremap = true, silent = true }
-vim.api.nvim_set_keymap('', "<Space>", "<Nop>", opts)
+vim.api.nvim_set_keymap('', "<Space>", "<Nop>", { noremap = true, silent = true })
 vim.g.mapleader = ' '
 
 local options = {
@@ -15,7 +14,6 @@ local options = {
   mouse = '',                              -- desabilita mouse
   pumheight = 10,                          -- número máximo de itens para aparecer em menu popup
   showmode = false,                        -- desabilita -- INSERT -- e similares
-  -- showtabline = 2,                         -- sempre mostra tabs
   smartcase = true,                        -- smart case
   smartindent = true,                      -- indentação inteligente
   splitbelow = true,                       -- ao fazer split horizontal coloca o novo split embaixo do atual
@@ -38,9 +36,6 @@ local options = {
   eol = true,                              -- adiciona uma linha em branco no final do arquivo
   termguicolors = true,                    -- habilita cores 24-bits
   background = 'dark',                     -- background dark
-  foldmethod = 'indent',
-  foldexpr = 'nvim_treesitter#foldexpr()',
-  foldenable = false,
 }
 
 for k, v in pairs(options) do
