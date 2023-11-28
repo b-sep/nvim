@@ -4,7 +4,8 @@ local builtin = require('telescope.builtin')
 
 -- Modo normal --
 keymap('n', '<leader>e', ':NvimTreeToggle<CR>', opts)    -- mapeia tecla líder(espaço) + e para abrir o explorer
-keymap('n', '<leader>q', ':qa<cr>', opts)
+keymap('n', '<leader>q', ':q<cr>', opts)
+keymap('n', '<leader>Q', ':qa<cr>', opts)
 keymap('n', '<C-h>', '<C-w>h', opts)                     -- mapeia ctrl + h para ir para a janela da esquerda
 keymap('n', '<C-l>', '<C-w>l', opts)                     -- mapeia ctrl + l para ir para a janela da direita
 keymap('n', '<C-j>', '<C-w>j', opts)                     -- mapeia ctrl + j para ir para a janela abaixo

@@ -1,14 +1,14 @@
 local opt = vim.opt -- (set vimscript)
 
 -- Configura tecla principal
-vim.api.nvim_set_keymap('', "<Space>", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('', '<Space>', '<Nop>', { noremap = true, silent = true })
 vim.g.mapleader = ' '
 
 local options = {
   backup = false,                          -- não gera backup
-  clipboard = "unnamedplus",               -- da acesso ao clipboard do sistema ao neovim
+  clipboard = 'unnamedplus',               -- da acesso ao clipboard do sistema ao neovim
   cmdheight = 1,                           -- espaço na linha de comando do neovim
-  completeopt = { "menuone", "noselect" }, -- lista de comandos separada por vírgula (insert mode)
+  completeopt = { 'menuone', 'noselect' }, -- lista de comandos separada por vírgula (insert mode)
   conceallevel = 0,                        -- torna aspas visíveis em json files
   ignorecase = true,                       -- ignora case em buscas
   mouse = '',                              -- desabilita mouse
@@ -30,8 +30,8 @@ local options = {
   number = true,                           -- mostra número da linha
   relativenumber = true,                   -- mostra número relativo a linha atual
   numberwidth = 4,                         -- tamanho da coluna de números (default é 4, apenas evidenciando)
-  signcolumn = "yes",                      -- sempre mostra coluna de sinalização (antes dos números), caso contrário o texto mudaria
-  wrap = false,                             -- quebra linha caso seja mais que a largura da tela
+  signcolumn = 'yes',                      -- sempre mostra coluna de sinalização (antes dos números), caso contrário o texto mudaria
+  wrap = false,                            -- quebra linha caso seja mais que a largura da tela
   scrolloff = 8,                           -- mínimo de linhas acima e abaixo da linha atual
   eol = true,                              -- adiciona uma linha em branco no final do arquivo
   termguicolors = true,                    -- habilita cores 24-bits
@@ -42,4 +42,4 @@ for k, v in pairs(options) do
   opt[k] = v
 end
 
-opt.iskeyword:append({'+', '=', '-'})      -- trata palavra por +, = ou - como uma única palavra
+opt.iskeyword:append({ '+', '=', '-' })    -- trata palavra por +, = ou - como uma única palavra
