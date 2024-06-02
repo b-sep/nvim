@@ -1,6 +1,5 @@
 return {
   'hrsh7th/cmp-nvim-lsp',
-  enable = true,
   dependencies = {
     'hrsh7th/nvim-cmp',
     'hrsh7th/cmp-buffer',

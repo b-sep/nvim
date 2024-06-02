@@ -15,7 +15,6 @@ keymap('n', '<C-s>', ':w<CR>', opts)                     -- salva o arquivo
 keymap('n', '<A-z>', ':set wrap!<CR>', opts)
 vim.keymap.set('n', '<C-e>', builtin.find_files, opts)
 vim.keymap.set('n', '<leader>f', builtin.live_grep, opts)
-vim.keymap.set('n', '<C-f>', builtin.current_buffer_fuzzy_find, opts)
 vim.keymap.set('n', 'F', builtin.buffers, opts)
 
 -- Redimensionar janelas
@@ -34,7 +33,6 @@ keymap('i', '<A-k>', '<ESC>:m .-2<CR>==gi', opts)        -- move a linha para ci
 keymap('i', '<A-j>', '<ESC>:m .+1<CR>==gi', opts)        -- move a linha para baixo em modo de inserção
 keymap('i', '<C-s>', '<ESC>:w<CR>', opts)                -- salva o arquivo
 keymap('i', '<C-e>', "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", opts)
-keymap('i', '<C-f>', '<cmd>Telescope current_buffer_fuzzy_find theme=cursor previewer=false<cr>', opts)
 keymap('i', '<A-z>', '<ESC>:set wrap!<CR>==gi', opts)
 vim.keymap.set('i', '<C-_>', function() require('Comment.api').toggle.linewise.current() end, opts) -- commentario com ctrl / no modo de inserção
 
