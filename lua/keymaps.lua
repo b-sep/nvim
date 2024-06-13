@@ -11,6 +11,7 @@ keymap('n', '<C-l>', '<C-w>l', opts)                     -- mapeia ctrl + l para
 keymap('n', '<C-j>', '<C-w>j', opts)                     -- mapeia ctrl + j para ir para a janela abaixo
 keymap('n', '<C-k>', '<C-w>k', opts)                     -- mapeia ctrl + k para ir para a janela de cima
 keymap('n', '<C-\\>', ':vsp<cr>', opts)                  -- split na tela verticalmente
+keymap('n', '<A-,>', ':sp<cr>', opts)                  -- split na tela verticalmente
 keymap('n', '<C-s>', ':w<cr>', opts)                     -- salva o arquivo
 keymap('n', '<A-z>', ':set wrap!<cr>', opts)
 keymap('n', '<A-p>', ':MarkdownPreviewToggle<cr>', opts)     -- markdown preview
