@@ -9,7 +9,7 @@ local servers = {
   'lua_ls',
   'pyright',
   'solargraph',
-  'tsserver'
+  'ts_ls'
 }
 
 mason.setup()
