@@ -4,7 +4,7 @@ local mason_lsp_config = require('mason-lspconfig')
 local servers = {
   'clangd',
   'cssls',
-  'erlangls',
+  -- 'erlangls',
   'html',
   'lua_ls',
   'pyright',
