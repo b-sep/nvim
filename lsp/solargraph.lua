@@ -1,8 +1,10 @@
+-- https://github.com/castwide/vscode-solargraph/blob/master/README.md#extension-settings
 return {
-  cmd = { 'solargraph', 'stdio' },
+  cmd = { 'bundle', 'exec', 'solargraph', 'stdio' },
   settings = {
     solargraph = {
       diagnostics = true,
+      useBundler = true,
     },
   },
   init_options = { formatting = true },
