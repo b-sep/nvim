@@ -27,7 +27,7 @@ return {
       pickers = {
         find_files = {
           hidden = true,
-          no_ignore = true,
+          -- no_ignore = true,
           previewer = false
         },
         live_grep = {
