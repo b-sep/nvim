@@ -1,5 +1,7 @@
 require('lsp.diagnostics').setup()
 
+local on_attach = require('lsp.diagnostics').on_attach
+
 local servers = {
   'clangd',
   'cssls',
@@ -16,6 +18,8 @@ for _, server in ipairs(servers) do
   if ok then
     opts = vim.tbl_deep_extend('force', settings, opts)
   end
+
+  opts.on_attach = on_attach
 
   vim.lsp.config(server, opts)
 end
