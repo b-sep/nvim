@@ -3,8 +3,7 @@ return {
   cmd = { 'bundle', 'exec', 'solargraph', 'stdio' },
   settings = {
     solargraph = {
-      diagnostics = true,
-      useBundler = true,
+      diagnostics = true
     },
   },
   init_options = { formatting = true },
